@@ -40,7 +40,6 @@ REA-Assistant-MCP/
 │   ├── cli_runner.py
 │   └── server.py
 ├── requirements.txt
-├── README.md
 └── .gitignore
 ```
 
