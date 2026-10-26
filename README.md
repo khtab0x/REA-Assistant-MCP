@@ -1,97 +1,107 @@
-REA-Assistant MCP Server (Local Reverse Engineering AI)
+# REA-Assistant-MCP
 
-A powerful, 100% local, and free Model Context Protocol (MCP) server that transforms your local Large Language Models (LLMs) into a fully equipped Reverse Engineering Assistant.
+A local, free, and privacy-preserving Model Context Protocol (MCP) server for reverse engineering workflows.
 
-By integrating this server with an AI client like LM Studio, your local model gains the ability to dynamically inspect binaries, extract strings, read hex dumps, and execute command-line reverse engineering tools—all without your sensitive files ever leaving your machine.
+REA-Assistant-MCP connects a local LLM client such as LM Studio to a set of practical binary-analysis tools. It allows an AI assistant to inspect executable files, extract strings, read raw bytes, and run CLI tools in a controlled manner without sending files to a remote service.
 
-Key Features
+## What this project does
 
-Binary Analysis (analyze_file_basic): Fetches basic binary information including size, SHA256 hashes, and magic bytes to quickly identify Windows PE or Linux ELF files.
+This project turns a local language model into a reverse engineering assistant by exposing tools over MCP. The server can:
 
-String Extraction (extract_binary_strings): Quickly dumps and filters readable ASCII strings from executables to uncover hidden paths, URLs, or hardcoded credentials.
+- Analyze a file's basic metadata
+- Extract readable strings from PE/ELF binaries
+- Read hex dumps at specific offsets
+- Execute selected CLI-based analysis tools via subprocess
 
-Hex Inspector (read_hex_chunk): Reads chunks of bytes from binaries at specific offsets, returning cleanly formatted hex dumps directly to the AI's context.
+## Features
 
-CLI Tool Runner (run_cli_tool): A secure subprocess layer that allows the AI to execute standard reverse engineering CLI commands (e.g., radare2, objdump, or Ghidra headless scripts) and read the output.
+- Binary metadata inspection
+  - File size
+  - SHA256 hash
+  - Magic bytes
+  - Basic format identification
+- String extraction
+  - Dump readable ASCII strings from binaries
+  - Useful for spotting embedded paths, URLs, or suspicious indicators
+- Hex inspection
+  - Read byte chunks from a file at a specified offset
+  - Helpful for quick header and payload review
+- CLI tool execution
+  - Run external reverse engineering utilities in a controlled way
+  - Expose the results back to the MCP client
 
-Prerequisites
+## Project structure
 
-Python 3.10+ installed on your system.
+```text
+REA-Assistant-MCP/
+├── src/
+│   ├── __init__.py
+│   ├── binary_tools.py
+│   ├── cli_runner.py
+│   └── server.py
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
 
-LM Studio (latest version with MCP support).
+## Requirements
 
-Clone this repository and install the dependencies:
+- Python 3.10+
+- LM Studio (with MCP support)
 
+## Install
+
+```bash
 git clone https://github.com/khtab0x/REA-Assistant-MCP.git
 cd REA-Assistant-MCP
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+```
 
+## Run the server
 
-Step-by-Step GUI Setup (LM Studio)
+```bash
+python -m src.server
+```
 
-Connecting the REA-Assistant to LM Studio is incredibly easy using the built-in MCP configuration UI. Follow these visual steps:
+This starts the MCP server over stdio, which is the transport expected by clients such as LM Studio.
 
-Step 1: Open Settings
+## LM Studio setup
 
-Open LM Studio and click on the Settings (gear icon) located at the bottom left of the window.
+1. Open LM Studio.
+2. Go to Settings > Integrations > MCP.
+3. Click Add custom MCP server.
+4. Configure the server with:
+   - Name: REA
+   - Command: python
+   - Arguments:
+     - `-m`
+     - `src.server`
+   - Working directory: the folder where this repository is located
+5. Save the configuration and verify the server connects.
 
-Step 2: Navigate to MCP Integrations
+## Example usage
 
-In the left sidebar, scroll down to the Integrations section and click on MCP.
+Once connected, you can ask your local model to use the tools in natural language, for example:
 
-Step 3: Add Custom MCP Server
+- "Analyze this binary and report its basic file information."
+- "Extract readable strings from this executable and look for suspicious URLs."
+- "Read the hex at offset 0x1000 and inspect the header."
 
-Scroll down to the "Manual MCP server setup" section and click the + Add custom MCP button.
+## Tools exposed by the server
 
-Step 4: Configure the Server
+The server registers the following MCP tools:
 
-Fill out the configuration fields exactly as shown below:
+- `analyze_file_basic`
+- `extract_binary_strings`
+- `read_hex_chunk`
+- `run_cli_tool`
 
-Name: REA
+## Notes
 
-Command: python (Ensure Python is in your system PATH, or provide the absolute path to your virtual environment's python.exe)
+This project is intended for local analysis and educational use. It is designed to help AI-assisted reverse engineering workflows while keeping data local to the machine running the model.
 
-Arguments:
+## License
 
-Add argument 1: -m
-
-Add argument 2: src.server
-
-Working directory: The absolute path to where you downloaded this project (e.g., C:\REA-Assistant-MCP).
-
-Step 5: Verify Connection
-
-Save the settings. Within a few seconds, the status should turn Green and display Connected · 4 tools ready.
-
-You are all set! Open a chat with any local model in LM Studio, and it will now have access to your reverse engineering tools.
-
-Usage Examples
-
-Once connected, simply talk to your local AI. Try giving it prompts like:
-
-"Can you use the analyze_file_basic tool on C:\malware_samples\suspicious.exe?"
-
-"Run the extract_binary_strings tool on that executable and tell me if you see any suspicious IP addresses or web URLs."
-
-"Read a hex chunk at offset 0x1000 from the DLL using read_hex_chunk and analyze the header."
-
-Project Architecture
-
-The project is highly modular to ensure clean code and easy expansion for future reverse engineering tools:
-
-REA-Assistant-MCP/
-│
-├── src/
-│   ├── __init__.py             # Marks the directory as a Python package
-│   ├── server.py               # Main entry point; initializes FastMCP and registers tools
-│   ├── binary_tools.py         # Core logic for hashing, string extraction, and hex analysis
-│   └── cli_runner.py           # Subprocess execution layer for external CLI tools
-│
-├── .gitignore                  
-├── requirements.txt            # Project dependencies (mcp, pydantic)
-└── README.md                   
-
-
-License
-
-This project is licensed under the MIT License.
+This project currently does not specify a license file in the repository metadata. Please check the repository settings or upstream project documentation before using it in a production or commercial context.
