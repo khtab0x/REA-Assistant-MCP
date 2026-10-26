@@ -2,7 +2,7 @@
 
 A local, free, and privacy-preserving Model Context Protocol (MCP) server for reverse engineering workflows.
 
-REA-Assistant-MCP connects a local LLM client such as LM Studio to a set of practical binary-analysis tools. It allows an AI assistant to inspect executable files, extract strings, read raw bytes, and run CLI tools in a controlled manner without sending files to a remote service.
+REA-Assistant-MCP connects a local LLM client such as LM Studio to a set of practical binary-analysis tools. It allows an AI assistant to inspect executable files, extract strings, read raw bytes, and execute command-line analysis tools without sending files to a remote service.
 
 ## What this project does
 
@@ -29,6 +29,22 @@ This project turns a local language model into a reverse engineering assistant b
 - CLI tool execution
   - Run external reverse engineering utilities in a controlled way
   - Expose the results back to the MCP client
+
+## Screenshots
+
+These screenshots show the project in use and the LM Studio MCP setup flow.
+
+<div align="center">
+  <img src="./REA-Assistant-MCP/1.png" alt="REA-Assistant-MCP screenshot 1" width="900" />
+  <br /><br />
+  <img src="./REA-Assistant-MCP/2.png" alt="REA-Assistant-MCP screenshot 2" width="900" />
+  <br /><br />
+  <img src="./REA-Assistant-MCP/3.png" alt="REA-Assistant-MCP screenshot 3" width="900" />
+  <br /><br />
+  <img src="./REA-Assistant-MCP/4.png" alt="REA-Assistant-MCP screenshot 4" width="900" />
+  <br /><br />
+  <img src="./REA-Assistant-MCP/5.png" alt="REA-Assistant-MCP screenshot 5" width="900" />
+</div>
 
 ## Project structure
 
