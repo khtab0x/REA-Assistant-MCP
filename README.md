@@ -59,15 +59,7 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Run the server
-
-```bash
-python -m src.server
-```
-
-This starts the MCP server over stdio, which is the transport expected by clients such as LM Studio.
-
-## Step-by-Step GUI Setup (LM Studio)
+## Step-by-Step GUI Setup (LM Studio - Bionic -)
 
 Connect the REA-Assistant to LM Studio using the built-in MCP configuration UI.
 
@@ -81,7 +73,7 @@ Open LM Studio and click the Settings gear icon in the lower-left area of the wi
 
 In the left sidebar, scroll down to the Integrations section and click on MCP.
 
-<img src="./REA-Assistant-MCP/2.png" alt="Step 2 - Navigate to MCP Integrations" width="680" />
+<img src="./REA-Assistant-MCP/2.png" alt="Step 2 - Navigate to MCP Integrations" width="400" />
 
 ### Step 3: Add Custom MCP Server
 
