@@ -79,7 +79,7 @@ Open LM Studio and click the Settings gear icon in the lower-left area of the wi
 
 In the left sidebar, scroll down to the Integrations section and click on MCP.
 
-<img src="./REA-Assistant-MCP/2.png" alt="Step 2 - Navigate to MCP Integrations" width="300" />
+<img src="./REA-Assistant-MCP/2.png" alt="Step 2 - Navigate to MCP Integrations" width="150" />
 
 ### Step 3: Add Custom MCP Server
 
