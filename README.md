@@ -72,14 +72,6 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Run the server
-
-```bash
-python -m src.server
-```
-
-This starts the MCP server over stdio, which is the transport expected by clients such as LM Studio.
-
 ## LM Studio setup
 
 1. Open LM Studio.
