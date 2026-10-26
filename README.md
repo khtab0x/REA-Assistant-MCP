@@ -61,7 +61,9 @@ pip install -r requirements.txt
 
 ## Step-by-Step GUI Setup (LM Studio - Bionic -)
 
-[Download it from here](https://lmstudio.ai)
+[Download it from here](https://lmstudio.ai) >
+
+> **⚠️ Important Note:** When downloading a local AI model, please ensure that the model size and quantization level are compatible with your GPU's VRAM capacity to avoid crashes or severe performance drops.
 
 Connect the REA-Assistant to LM Studio using the built-in MCP configuration UI.
 
