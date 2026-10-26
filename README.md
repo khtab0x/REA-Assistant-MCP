@@ -85,7 +85,7 @@ In the left sidebar, scroll down to the Integrations section and click on MCP.
 
 Scroll down to the Manual MCP server setup section and click the Add custom MCP button.
 
-<img src="./REA-Assistant-MCP/3.png" alt="Step 3 - Add Custom MCP Server" width="680" />
+<img src="./REA-Assistant-MCP/3.png" alt="Step 3 - Add Custom MCP Server" width="400" />
 
 ### Step 4: Configure the Server
 
@@ -99,7 +99,7 @@ Fill in the server details exactly as shown below:
   - `src.server`
 - Working directory: Copy the folder path and paste it here
 
-<img src="./REA-Assistant-MCP/4.png" alt="Step 4 - Configure the Server" width="680" />
+<img src="./REA-Assistant-MCP/4.png" alt="Step 4 - Configure the Server" width="500" />
 
 ### Step 5: Verify Connection
 
