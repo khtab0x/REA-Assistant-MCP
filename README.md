@@ -77,7 +77,7 @@ Open LM Studio and click the Settings gear icon in the lower-left area of the wi
 
 ### Step 2: Navigate to MCP Integrations
 
-In the left sidebar, scroll down to the Integrations section and click on MCP.
+In the left sidebar, Integrations section and click on MCP.
 
 <img src="./REA-Assistant-MCP/2.png" alt="Step 2 - Navigate to MCP Integrations" width="150" />
 
