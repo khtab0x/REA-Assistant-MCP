@@ -61,6 +61,8 @@ pip install -r requirements.txt
 
 ## Step-by-Step GUI Setup (LM Studio - Bionic -)
 
+[Download it from here](https://lmstudio.ai)
+
 Connect the REA-Assistant to LM Studio using the built-in MCP configuration UI.
 
 ### Step 1: Open Settings
@@ -85,12 +87,13 @@ Scroll down to the Manual MCP server setup section and click the Add custom MCP 
 
 Fill in the server details exactly as shown below:
 
-- Name: REA
+- Name: REA ( Or any name you wnat )
 - Command: python
 - Arguments:
   - `-m`
+  - + Add Arguments
   - `src.server`
-- Working directory: the folder where you downloaded this project
+- Working directory: Copy the folder path and paste it here
 
 <img src="./REA-Assistant-MCP/4.png" alt="Step 4 - Configure the Server" width="680" />
 
