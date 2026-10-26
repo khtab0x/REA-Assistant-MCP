@@ -35,15 +35,15 @@ This project turns a local language model into a reverse engineering assistant b
 These screenshots show the project in use and the LM Studio MCP setup flow.
 
 <div align="center">
-  <img src="./REA-Assistant-MCP/1.png" alt="REA-Assistant-MCP screenshot 1" width="900" />
+  <img src="./REA-Assistant-MCP/1.png" alt="REA-Assistant-MCP screenshot 1" width="600" />
   <br /><br />
-  <img src="./REA-Assistant-MCP/2.png" alt="REA-Assistant-MCP screenshot 2" width="900" />
+  <img src="./REA-Assistant-MCP/2.png" alt="REA-Assistant-MCP screenshot 2" width="600" />
   <br /><br />
-  <img src="./REA-Assistant-MCP/3.png" alt="REA-Assistant-MCP screenshot 3" width="900" />
+  <img src="./REA-Assistant-MCP/3.png" alt="REA-Assistant-MCP screenshot 3" width="600" />
   <br /><br />
-  <img src="./REA-Assistant-MCP/4.png" alt="REA-Assistant-MCP screenshot 4" width="900" />
+  <img src="./REA-Assistant-MCP/4.png" alt="REA-Assistant-MCP screenshot 4" width="600" />
   <br /><br />
-  <img src="./REA-Assistant-MCP/5.png" alt="REA-Assistant-MCP screenshot 5" width="900" />
+  <img src="./REA-Assistant-MCP/5.png" alt="REA-Assistant-MCP screenshot 5" width="600" />
 </div>
 
 ## Project structure
