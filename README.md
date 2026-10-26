@@ -95,7 +95,7 @@ Fill in the server details exactly as shown below:
 - Command: python
 - Arguments:
   - `-m`
-  - + Add Arguments
+  - Click Add Arguments, then:
   - `src.server`
 - Working directory: Copy the folder path and paste it here
 
