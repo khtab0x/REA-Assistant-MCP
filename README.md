@@ -67,13 +67,13 @@ pip install -r requirements.txt
 
 Use [hugging face](https://huggingface.co) to Download your AI Model
 
-> **⚠️ You can do a quick search to see which AI model is right for you**
+> **⚠️ You can do a quick search to see which AI model is right for your PC**
 
 ### Step 1: Open Settings
 
 Open LM Studio and click the Settings gear icon in the lower-left area of the window.
 
-<img src="./REA-Assistant-MCP/1.png" alt="Step 1 - Open Settings" width="680" />
+<img src="./REA-Assistant-MCP/1.png" alt="Step 1 - Open Settings" width="500" />
 
 ### Step 2: Navigate to MCP Integrations
 
