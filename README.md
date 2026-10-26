@@ -22,7 +22,7 @@ LM Studio (latest version with MCP support).
 
 Clone this repository and install the dependencies:
 
-git clone https://github.com/YOUR_USERNAME/REA-Assistant-MCP.git
+git clone https://github.com/khtab0x/REA-Assistant-MCP.git
 cd REA-Assistant-MCP
 pip install -r requirements.txt
 
