@@ -122,7 +122,3 @@ The server registers the following MCP tools:
 ## Notes
 
 This project is intended for local analysis and educational use. It is designed to help AI-assisted reverse engineering workflows while keeping data local to the machine running the model.
-
-## License
-
-This project currently does not specify a license file in the repository metadata. Please check the repository settings or upstream project documentation before using it in a production or commercial context.
