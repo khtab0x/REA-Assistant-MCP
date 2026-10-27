@@ -90,7 +90,7 @@ Scroll down to the Manual MCP server setup section and click the Add custom MCP 
 
 Fill in the server details exactly as shown below:
 
-- Name: REA ( Or any name you wnat )
+- Name: REA ( Or any name you want )
 - Command: python
 - Arguments:
   - `-m`
